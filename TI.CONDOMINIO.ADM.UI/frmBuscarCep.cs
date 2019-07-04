@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace TI.CONDOMINIO.ADM.UI
+{
+    public partial class frmBuscarCep : Form
+    {
+        public frmBuscarCep(int _tipo)
+        {
+            InitializeComponent();
+
+            this.tipo = _tipo;
+        }
+
+        public int tipo = 0;
+
+        private void frmBuscarCep_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

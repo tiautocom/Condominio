@@ -32,5 +32,11 @@ namespace TI.CONDOMINIO.ADM.UI
                 documento = frmTipoDocumentoPesquisa.retorno;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPesquisarNumApto frmPesquisarNumApto = new frmPesquisarNumApto();
+            frmPesquisarNumApto.ShowDialog();
+        }
     }
 }

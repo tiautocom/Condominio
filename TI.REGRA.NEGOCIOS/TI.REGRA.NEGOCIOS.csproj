@@ -54,6 +54,7 @@
     <Compile Include="GaleriaRegraNegocios.cs" />
     <Compile Include="GrupoRegraNegocios.cs" />
     <Compile Include="LeiAcessoRegraNegocios.cs" />
+    <Compile Include="MoradorRegraNegocios.cs" />
     <Compile Include="MudancaRegraNegocios.cs" />
     <Compile Include="PessoaRegraNegocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

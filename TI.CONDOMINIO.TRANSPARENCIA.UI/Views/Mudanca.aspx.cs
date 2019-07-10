@@ -185,6 +185,9 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Views
                 mudancas.Apto = Convert.ToInt32(txtApto.Text);
                 mudancas.Lado = lado;
                 mudancas.Bloco = ddlBloco.SelectedValue.Trim();
+                mudancas.Ativo = true;
+                mudancas.HoraInicio = "00:00";
+                mudancas.HoraFim = "00:00";
 
                 int idRet = mudancaRegraNegocios.Cadastrar(mudancas);
 

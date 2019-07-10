@@ -19,5 +19,8 @@ namespace TI.OBJETO.TRANSFERENCIA
         public int IdSindico { get; set; }
         public int Apto { get; set; }
         public int Lado { get; set; }
+        public bool Ativo { get; set; }
+        public string HoraInicio { get; set; }
+        public string HoraFim { get; set; }
     }
 }

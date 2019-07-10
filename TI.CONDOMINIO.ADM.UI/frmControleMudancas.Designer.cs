@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvAgenda = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pesquisasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.apartamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blocosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtPesquisas = new System.Windows.Forms.ToolStripTextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.colSel = new System.Windows.Forms.DataGridViewImageColumn();
             this.colIdMudanca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +44,13 @@
             this.colDesStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInicioMudanca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFimMudanca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pesquisasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apartamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blocosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtPesquisas = new System.Windows.Forms.ToolStripTextBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -84,62 +84,8 @@
             this.dgvAgenda.ReadOnly = true;
             this.dgvAgenda.RowHeadersVisible = false;
             this.dgvAgenda.Size = new System.Drawing.Size(1130, 580);
-            this.dgvAgenda.TabIndex = 0;
+            this.dgvAgenda.TabIndex = 1;
             this.dgvAgenda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgenda_CellContentClick);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pesquisasToolStripMenuItem,
-            this.txtPesquisas});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1136, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pesquisasToolStripMenuItem
-            // 
-            this.pesquisasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataToolStripMenuItem,
-            this.apartamentosToolStripMenuItem,
-            this.blocosToolStripMenuItem});
-            this.pesquisasToolStripMenuItem.Name = "pesquisasToolStripMenuItem";
-            this.pesquisasToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
-            this.pesquisasToolStripMenuItem.Text = "Pesquisas";
-            // 
-            // dataToolStripMenuItem
-            // 
-            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
-            this.dataToolStripMenuItem.Text = "Data";
-            // 
-            // apartamentosToolStripMenuItem
-            // 
-            this.apartamentosToolStripMenuItem.Name = "apartamentosToolStripMenuItem";
-            this.apartamentosToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
-            this.apartamentosToolStripMenuItem.Text = "Apartamentos";
-            // 
-            // blocosToolStripMenuItem
-            // 
-            this.blocosToolStripMenuItem.Name = "blocosToolStripMenuItem";
-            this.blocosToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
-            this.blocosToolStripMenuItem.Text = "Blocos";
-            // 
-            // txtPesquisas
-            // 
-            this.txtPesquisas.Name = "txtPesquisas";
-            this.txtPesquisas.Size = new System.Drawing.Size(1000, 24);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 614);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1136, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // colSel
             // 
@@ -253,6 +199,60 @@
             this.colFimMudanca.Name = "colFimMudanca";
             this.colFimMudanca.ReadOnly = true;
             this.colFimMudanca.Visible = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pesquisasToolStripMenuItem,
+            this.txtPesquisas});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1136, 28);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // pesquisasToolStripMenuItem
+            // 
+            this.pesquisasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataToolStripMenuItem,
+            this.apartamentosToolStripMenuItem,
+            this.blocosToolStripMenuItem});
+            this.pesquisasToolStripMenuItem.Name = "pesquisasToolStripMenuItem";
+            this.pesquisasToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.pesquisasToolStripMenuItem.Text = "Pesquisas";
+            // 
+            // dataToolStripMenuItem
+            // 
+            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.dataToolStripMenuItem.Text = "Data";
+            // 
+            // apartamentosToolStripMenuItem
+            // 
+            this.apartamentosToolStripMenuItem.Name = "apartamentosToolStripMenuItem";
+            this.apartamentosToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.apartamentosToolStripMenuItem.Text = "Apartamentos";
+            // 
+            // blocosToolStripMenuItem
+            // 
+            this.blocosToolStripMenuItem.Name = "blocosToolStripMenuItem";
+            this.blocosToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.blocosToolStripMenuItem.Text = "Blocos";
+            // 
+            // txtPesquisas
+            // 
+            this.txtPesquisas.Name = "txtPesquisas";
+            this.txtPesquisas.Size = new System.Drawing.Size(1030, 24);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 614);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1136, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // frmControleMudancas
             // 

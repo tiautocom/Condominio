@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.lblDescPeriodo = new System.Windows.Forms.Label();
@@ -61,6 +61,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dgvEmpresa = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbxTipoPesquisa = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtPesquisas = new System.Windows.Forms.TextBox();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.lblDescricaoMudanca = new System.Windows.Forms.Label();
+            this.btnIniciarMudanca = new System.Windows.Forms.Button();
             this.colSel = new System.Windows.Forms.DataGridViewImageColumn();
             this.colid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,15 +81,8 @@
             this.colTefefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbxTipoPesquisa = new System.Windows.Forms.ComboBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtPesquisas = new System.Windows.Forms.TextBox();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.lblDescricaoMudanca = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.colInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.gbxResponsavel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
@@ -420,8 +422,8 @@
             // 
             this.dgvEmpresa.AllowUserToAddRows = false;
             this.dgvEmpresa.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvEmpresa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvEmpresa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmpresa.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpresa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -435,7 +437,9 @@
             this.colDocumento,
             this.colTefefone,
             this.colCelular,
-            this.colVeiculo});
+            this.colVeiculo,
+            this.colInicio,
+            this.colFinal});
             this.dgvEmpresa.Location = new System.Drawing.Point(4, 272);
             this.dgvEmpresa.Name = "dgvEmpresa";
             this.dgvEmpresa.ReadOnly = true;
@@ -443,92 +447,6 @@
             this.dgvEmpresa.Size = new System.Drawing.Size(1122, 297);
             this.dgvEmpresa.TabIndex = 0;
             this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick);
-            // 
-            // colSel
-            // 
-            this.colSel.HeaderText = "";
-            this.colSel.Image = global::TI.CONDOMINIO.ADM.UI.Properties.Resources.update;
-            this.colSel.Name = "colSel";
-            this.colSel.ReadOnly = true;
-            this.colSel.Width = 40;
-            // 
-            // colid
-            // 
-            this.colid.DataPropertyName = "Id";
-            this.colid.HeaderText = "CODIGO";
-            this.colid.Name = "colid";
-            this.colid.ReadOnly = true;
-            this.colid.Visible = false;
-            // 
-            // colNome
-            // 
-            this.colNome.DataPropertyName = "Nome";
-            this.colNome.HeaderText = "NOME";
-            this.colNome.Name = "colNome";
-            this.colNome.ReadOnly = true;
-            this.colNome.Width = 300;
-            // 
-            // colEmpresa
-            // 
-            this.colEmpresa.DataPropertyName = "Empresa";
-            this.colEmpresa.HeaderText = "EMPRESA";
-            this.colEmpresa.Name = "colEmpresa";
-            this.colEmpresa.ReadOnly = true;
-            this.colEmpresa.Width = 300;
-            // 
-            // colPlaca
-            // 
-            this.colPlaca.DataPropertyName = "Placa";
-            this.colPlaca.HeaderText = "PLACA";
-            this.colPlaca.Name = "colPlaca";
-            this.colPlaca.ReadOnly = true;
-            // 
-            // colTipo
-            // 
-            this.colTipo.DataPropertyName = "Tipo";
-            this.colTipo.HeaderText = "TIPO DE DOC.";
-            this.colTipo.Name = "colTipo";
-            this.colTipo.ReadOnly = true;
-            this.colTipo.Width = 150;
-            // 
-            // colData
-            // 
-            this.colData.DataPropertyName = "Data";
-            this.colData.HeaderText = "DATA";
-            this.colData.Name = "colData";
-            this.colData.ReadOnly = true;
-            this.colData.Visible = false;
-            // 
-            // colDocumento
-            // 
-            this.colDocumento.DataPropertyName = "Documento";
-            this.colDocumento.HeaderText = "DOCUMENTOS";
-            this.colDocumento.Name = "colDocumento";
-            this.colDocumento.ReadOnly = true;
-            this.colDocumento.Width = 120;
-            // 
-            // colTefefone
-            // 
-            this.colTefefone.DataPropertyName = "Telefone";
-            this.colTefefone.HeaderText = "TELEFONE";
-            this.colTefefone.Name = "colTefefone";
-            this.colTefefone.ReadOnly = true;
-            this.colTefefone.Visible = false;
-            // 
-            // colCelular
-            // 
-            this.colCelular.DataPropertyName = "Celular";
-            this.colCelular.HeaderText = "CELULAR";
-            this.colCelular.Name = "colCelular";
-            this.colCelular.ReadOnly = true;
-            // 
-            // colVeiculo
-            // 
-            this.colVeiculo.DataPropertyName = "Veiculo";
-            this.colVeiculo.HeaderText = "VEICULO";
-            this.colVeiculo.Name = "colVeiculo";
-            this.colVeiculo.ReadOnly = true;
-            this.colVeiculo.Visible = false;
             // 
             // groupBox3
             // 
@@ -619,16 +537,119 @@
             this.lblDescricaoMudanca.TabIndex = 26;
             this.lblDescricaoMudanca.Text = "FECHADO";
             // 
-            // button1
+            // btnIniciarMudanca
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(239, 575);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(655, 31);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Iniciar Mudança";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnIniciarMudanca.BackColor = System.Drawing.Color.White;
+            this.btnIniciarMudanca.Enabled = false;
+            this.btnIniciarMudanca.Location = new System.Drawing.Point(239, 575);
+            this.btnIniciarMudanca.Name = "btnIniciarMudanca";
+            this.btnIniciarMudanca.Size = new System.Drawing.Size(655, 31);
+            this.btnIniciarMudanca.TabIndex = 27;
+            this.btnIniciarMudanca.Text = "Iniciar Mudança";
+            this.btnIniciarMudanca.UseVisualStyleBackColor = false;
+            this.btnIniciarMudanca.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // colSel
+            // 
+            this.colSel.HeaderText = "";
+            this.colSel.Image = global::TI.CONDOMINIO.ADM.UI.Properties.Resources.update;
+            this.colSel.Name = "colSel";
+            this.colSel.ReadOnly = true;
+            this.colSel.Width = 40;
+            // 
+            // colid
+            // 
+            this.colid.DataPropertyName = "Id";
+            this.colid.HeaderText = "CODIGO";
+            this.colid.Name = "colid";
+            this.colid.ReadOnly = true;
+            this.colid.Visible = false;
+            // 
+            // colNome
+            // 
+            this.colNome.DataPropertyName = "Nome";
+            this.colNome.HeaderText = "NOME";
+            this.colNome.Name = "colNome";
+            this.colNome.ReadOnly = true;
+            this.colNome.Width = 300;
+            // 
+            // colEmpresa
+            // 
+            this.colEmpresa.DataPropertyName = "Empresa";
+            this.colEmpresa.HeaderText = "EMPRESA";
+            this.colEmpresa.Name = "colEmpresa";
+            this.colEmpresa.ReadOnly = true;
+            this.colEmpresa.Width = 300;
+            // 
+            // colPlaca
+            // 
+            this.colPlaca.DataPropertyName = "Placa";
+            this.colPlaca.HeaderText = "PLACA";
+            this.colPlaca.Name = "colPlaca";
+            this.colPlaca.ReadOnly = true;
+            // 
+            // colTipo
+            // 
+            this.colTipo.DataPropertyName = "Tipo";
+            this.colTipo.HeaderText = "TIPO DE DOC.";
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
+            this.colTipo.Width = 150;
+            // 
+            // colData
+            // 
+            this.colData.DataPropertyName = "Data";
+            this.colData.HeaderText = "DATA";
+            this.colData.Name = "colData";
+            this.colData.ReadOnly = true;
+            this.colData.Visible = false;
+            // 
+            // colDocumento
+            // 
+            this.colDocumento.DataPropertyName = "Documento";
+            this.colDocumento.HeaderText = "DOCUMENTOS";
+            this.colDocumento.Name = "colDocumento";
+            this.colDocumento.ReadOnly = true;
+            this.colDocumento.Width = 120;
+            // 
+            // colTefefone
+            // 
+            this.colTefefone.DataPropertyName = "Telefone";
+            this.colTefefone.HeaderText = "TELEFONE";
+            this.colTefefone.Name = "colTefefone";
+            this.colTefefone.ReadOnly = true;
+            this.colTefefone.Visible = false;
+            // 
+            // colCelular
+            // 
+            this.colCelular.DataPropertyName = "Celular";
+            this.colCelular.HeaderText = "CELULAR";
+            this.colCelular.Name = "colCelular";
+            this.colCelular.ReadOnly = true;
+            // 
+            // colVeiculo
+            // 
+            this.colVeiculo.DataPropertyName = "Veiculo";
+            this.colVeiculo.HeaderText = "VEICULO";
+            this.colVeiculo.Name = "colVeiculo";
+            this.colVeiculo.ReadOnly = true;
+            this.colVeiculo.Visible = false;
+            // 
+            // colInicio
+            // 
+            this.colInicio.DataPropertyName = "Inicio";
+            this.colInicio.HeaderText = "INICIO";
+            this.colInicio.Name = "colInicio";
+            this.colInicio.ReadOnly = true;
+            this.colInicio.Visible = false;
+            // 
+            // colFinal
+            // 
+            this.colFinal.DataPropertyName = "Final";
+            this.colFinal.HeaderText = "FINAL";
+            this.colFinal.Name = "colFinal";
+            this.colFinal.ReadOnly = true;
+            this.colFinal.Visible = false;
             // 
             // frmMudancaControleDados
             // 
@@ -636,7 +657,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1131, 611);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnIniciarMudanca);
             this.Controls.Add(this.lblDescricaoMudanca);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.btnSalvar);
@@ -709,7 +730,7 @@
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIniciarMudanca;
         private System.Windows.Forms.DataGridViewImageColumn colSel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colid;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
@@ -721,5 +742,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTefefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCelular;
         private System.Windows.Forms.DataGridViewTextBoxColumn colVeiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFinal;
     }
 }

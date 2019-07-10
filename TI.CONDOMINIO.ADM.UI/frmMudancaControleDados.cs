@@ -62,6 +62,7 @@ namespace TI.CONDOMINIO.ADM.UI
                 txtHoraInicio.Text = frmControleMudancas.hInicio;
                 txtHoraFim.Text = frmControleMudancas.hFim;
                 lblDescPeriodo.Text = frmControleMudancas.descPeriodo;
+                lblDescricaoMudanca.Text = frmControleMudancas.statusMudanca;
 
                 txtPesquisas.Focus();
                 txtPesquisas.SelectAll();
@@ -120,6 +121,7 @@ namespace TI.CONDOMINIO.ADM.UI
                     txtPlaca.Text = dgvEmpresa.Rows[e.RowIndex].Cells["colPlaca"].Value.ToString().Trim();
 
                     gbxResponsavel.Enabled = true;
+                    btnIniciarMudanca.Enabled = true;
 
                     txtNome.Focus();
                     txtNome.SelectAll();
@@ -283,7 +285,10 @@ namespace TI.CONDOMINIO.ADM.UI
 
         public void DescricaoStatusMudanca()
         {
-            lblDescricaoMudanca.Text = statusDescricao;
+            if (true)
+            {
+                lblDescricaoMudanca.Text = statusDescricao;
+            }
         }
     }
 }

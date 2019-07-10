@@ -96,6 +96,7 @@ namespace TI.REGRA.NEGOCIOS
                 conexaoSqlServer.LimparParametros();
                 conexaoSqlServer.AdicionarParametros("@Id", id);
                 conexaoSqlServer.AdicionarParametros("@Termino", hora);
+                conexaoSqlServer.AdicionarParametros("@Ativo", false);
 
                 int ret = 0;
 
@@ -142,8 +143,12 @@ namespace TI.REGRA.NEGOCIOS
                 conexaoSqlServer.AdicionarParametros("@DataCad", DateTime.Now);
                 conexaoSqlServer.AdicionarParametros("@Lado", mudancas.Lado);
                 conexaoSqlServer.AdicionarParametros("@Bloco", mudancas.Bloco);
+                conexaoSqlServer.AdicionarParametros("@Ativo", mudancas.Ativo);
+                conexaoSqlServer.AdicionarParametros("@HoraInicio", mudancas.HoraInicio);
+                conexaoSqlServer.AdicionarParametros("@HoraFinal", mudancas.HoraFim);
 
                 int ret = 0;
+
                 ret = Convert.ToInt32(conexaoSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspMudancaSalvar").ToString());
                 return ret;
             }

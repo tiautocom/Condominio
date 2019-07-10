@@ -21,13 +21,21 @@ namespace TI.CONDOMINIO.ADM.UI
             this.dgvAgenda.AutoGenerateColumns = false;
         }
 
+        #region CLASSES E OBJETOS
+
         DataTable dadosTabela;
         MudancaRegraNegocios mudancaRegraNegocios;
 
+        #endregion
+
+        #region VARIAVEIS
+
         public int tipoUsuario = 0;
-        public string data, torre, bloco, apto, hInicio, hFim, descPeriodo = "";
+        public string data, torre, bloco, apto, hInicio, hFim, descPeriodo, statusMudanca = "";
         public string horaIni, horaFinal = "";
         public int idMudanca = 0;
+
+        #endregion
 
         private void frmControleMudancas_Load(object sender, EventArgs e)
         {
@@ -74,6 +82,15 @@ namespace TI.CONDOMINIO.ADM.UI
                     descPeriodo = dgvAgenda.Rows[e.RowIndex].Cells["colPeriodo"].Value.ToString().Trim();
                     horaIni = dgvAgenda.Rows[e.RowIndex].Cells["colInicioMudanca"].Value.ToString().Trim();
                     horaFinal = dgvAgenda.Rows[e.RowIndex].Cells["colFimMudanca"].Value.ToString().Trim();
+
+                    if (horaFinal == "00:00")
+                    {
+                        statusMudanca = "Horário em Aberto";
+                    }
+                    else
+                    {
+                        statusMudanca = "Horário Fechado";
+                    }
 
                     frmMudancaControleDados frmMudancaControleDados = new frmMudancaControleDados(this, horaIni, horaFinal, idMudanca);
                     frmMudancaControleDados.ShowDialog();

@@ -23,13 +23,20 @@ namespace TI.CONDOMINIO.ADM.UI
             this.idMudanca = IdMundanca;
         }
 
-        DataTable dadosTabela;
+        #region VARIAVEIS
 
         public string status = "";
         public string hInicio, hFim = "";
         public int idMudanca = 0;
 
+        #endregion
+
+        #region CLASSES E OBJETOS
+
         MudancaRegraNegocios mudancaRegraNegocios;
+        DataTable dadosTabela; 
+       
+        #endregion
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {

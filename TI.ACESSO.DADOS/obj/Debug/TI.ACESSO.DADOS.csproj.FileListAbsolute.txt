@@ -40,3 +40,4 @@ C:\Projetos\Git\CONDOMINIOS\TI.CONDOMINIO - 8 - Copia\TI.ACESSO.DADOS\bin\Debug\
 C:\Projetos\Git\CONDOMINIOS\TI.CONDOMINIO - 8 - Copia\TI.ACESSO.DADOS\obj\Debug\TI.ACESSO.DADOS.dll
 C:\Projetos\Git\CONDOMINIOS\TI.CONDOMINIO - 8 - Copia\TI.ACESSO.DADOS\obj\Debug\TI.ACESSO.DADOS.pdb
 C:\Projetos\Git\CONDOMINIOS\TI.CONDOMINIO - 8 - Copia\TI.ACESSO.DADOS\obj\Debug\TI.ACESSO.DADOS.csprojResolveAssemblyReference.cache
+C:\Projetos\Git\CONDOMINIOS\TI.CONDOMINIO\TI.ACESSO.DADOS\obj\Debug\TI.ACESSO.DADOS.csprojResolveAssemblyReference.cache

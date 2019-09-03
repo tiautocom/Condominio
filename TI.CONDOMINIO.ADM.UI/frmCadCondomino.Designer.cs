@@ -169,6 +169,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.TPDadosAdiconaisCond = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtCelularCondomino = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelCondomino = new System.Windows.Forms.MaskedTextBox();
             this.txtCpfCondomino = new System.Windows.Forms.MaskedTextBox();
             this.txtNumContaCondomino = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -196,8 +198,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.TPDadosApartamento = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtTelCondomino = new System.Windows.Forms.MaskedTextBox();
-            this.txtCelularCondomino = new System.Windows.Forms.MaskedTextBox();
             this.statusStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDependente)).BeginInit();
             this.groupBox7.SuspendLayout();
@@ -1289,7 +1289,7 @@
             // 
             this.cbAndar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAndar.FormattingEnabled = true;
-            this.cbAndar.Location = new System.Drawing.Point(165, 52);
+            this.cbAndar.Location = new System.Drawing.Point(165, 115);
             this.cbAndar.Name = "cbAndar";
             this.cbAndar.Size = new System.Drawing.Size(438, 24);
             this.cbAndar.TabIndex = 23;
@@ -1298,7 +1298,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(5, 56);
+            this.label11.Location = new System.Drawing.Point(5, 119);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 16);
             this.label11.TabIndex = 22;
@@ -1361,7 +1361,7 @@
             // 
             this.cbBloco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBloco.FormattingEnabled = true;
-            this.cbBloco.Location = new System.Drawing.Point(165, 116);
+            this.cbBloco.Location = new System.Drawing.Point(165, 85);
             this.cbBloco.Name = "cbBloco";
             this.cbBloco.Size = new System.Drawing.Size(438, 24);
             this.cbBloco.TabIndex = 13;
@@ -1562,7 +1562,7 @@
             // 
             this.cbTorre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTorre.FormattingEnabled = true;
-            this.cbTorre.Location = new System.Drawing.Point(165, 84);
+            this.cbTorre.Location = new System.Drawing.Point(165, 53);
             this.cbTorre.Name = "cbTorre";
             this.cbTorre.Size = new System.Drawing.Size(438, 24);
             this.cbTorre.TabIndex = 11;
@@ -1581,7 +1581,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(5, 88);
+            this.label7.Location = new System.Drawing.Point(5, 57);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 16);
             this.label7.TabIndex = 8;
@@ -1591,7 +1591,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(5, 120);
+            this.label6.Location = new System.Drawing.Point(5, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 7;
@@ -1670,6 +1670,22 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "DADOS CONDÔMINO";
+            // 
+            // txtCelularCondomino
+            // 
+            this.txtCelularCondomino.Location = new System.Drawing.Point(118, 134);
+            this.txtCelularCondomino.Mask = "(##)#####-####";
+            this.txtCelularCondomino.Name = "txtCelularCondomino";
+            this.txtCelularCondomino.Size = new System.Drawing.Size(172, 22);
+            this.txtCelularCondomino.TabIndex = 31;
+            // 
+            // txtTelCondomino
+            // 
+            this.txtTelCondomino.Location = new System.Drawing.Point(118, 106);
+            this.txtTelCondomino.Mask = "(##)####-####";
+            this.txtTelCondomino.Name = "txtTelCondomino";
+            this.txtTelCondomino.Size = new System.Drawing.Size(172, 22);
+            this.txtTelCondomino.TabIndex = 30;
             // 
             // txtCpfCondomino
             // 
@@ -1943,22 +1959,6 @@
             this.groupBox8.TabIndex = 8;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "DADOS APARTAMENTO";
-            // 
-            // txtTelCondomino
-            // 
-            this.txtTelCondomino.Location = new System.Drawing.Point(118, 106);
-            this.txtTelCondomino.Mask = "(##)####-####";
-            this.txtTelCondomino.Name = "txtTelCondomino";
-            this.txtTelCondomino.Size = new System.Drawing.Size(172, 22);
-            this.txtTelCondomino.TabIndex = 30;
-            // 
-            // txtCelularCondomino
-            // 
-            this.txtCelularCondomino.Location = new System.Drawing.Point(118, 134);
-            this.txtCelularCondomino.Mask = "(##)#####-####";
-            this.txtCelularCondomino.Name = "txtCelularCondomino";
-            this.txtCelularCondomino.Size = new System.Drawing.Size(172, 22);
-            this.txtCelularCondomino.TabIndex = 31;
             // 
             // frmCadCondomino
             // 

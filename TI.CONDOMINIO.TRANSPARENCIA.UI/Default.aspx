@@ -2,6 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <br />
     <div class="shadowBox">
         <div class="page-container">
 
@@ -43,8 +44,7 @@
                 <div class="col-md-4">
                     <h2>ATA DE REUNIÕES</h2>
                     <p>
-                        ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                        A Ata é um documento que tem como função validar as ações e tomadas de decisões de um síndico referente ao condomínio que administra. Ela serve como prova do que foi aprovado ou não durante uma assembleia e deve conter todas as informações importantes referentes à reunião de condomínio. Assim como todas as deliberações, não aprovações e todas as tarefas atribuídas a cada pessoa presente na reunião.
                     </p>
                     <p>
                         <a class="btn btn-default" href="Views/AtaReuniao.aspx">Saber mais &raquo;</a>
@@ -53,15 +53,15 @@
 
                 <div class="col-md-4">
                     <h2>RECEITAS E DESPESAS</h2>
-                    <p>
-                        NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
+                    <p style="border: 0px; margin: 0px 0px 1.5em; padding: 0px; color: rgb(58, 58, 58); font-family: Roboto, sans-serif; font-size: 17px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-style: initial; text-decoration-color: initial;">
+                        <span style="border: 0px; margin: 0px; padding: 0px; font-weight: 400;">É através do demonstrativo de receitas e despesas que é possível apurar todas as operações financeiras realizadas pelo condomínio em um determinado período. É importante que as informações sejam destacadas de forma resumida e objetiva para evitar confusões.</span>
                     </p>
                     <p>
                         <a class="btn btn-default" href="Views/ReceitasDespesas.aspx?id=1">Entrar &raquo;</a>
                     </p>
                 </div>
 
-                <div class="col-md-4">
+                <%--         <div class="col-md-4">
                     <h2>DEMONSTRATIVOS</h2>
                     <p>
                         You can easily find a web hosting company that offers the right mix of features and price for your applications.
@@ -69,7 +69,18 @@
                     <p>
                         <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Saber mais &raquo;</a>
                     </p>
+                </div>--%>
+
+                <div class="col-md-4">
+                    <h2>AVISOS E COMUNICADOS</h2>
+                    <p>
+                        Notifique o responsável de uma unidade sem causar atritos pessoais. A infração fica aberta para considerações de ambos.
+                    </p>
+                    <p>
+                        <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Saber mais &raquo;</a>
+                    </p>
                 </div>
+
             </div>
 
             <hr />
@@ -79,7 +90,7 @@
                 <div class="col-md-4">
                     <h2>OBRAS E MELHORIAS</h2>
                     <p>
-                        You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                        Toda obra deve ser aprovada em assembleia, a não ser que seja ... Se for para trocar visando modernizar o local com equipamentos mais avançados, a melhoria .... segurança e tentando sanear custos condomíniais, se enquadraria em util, .
                     </p>
                     <p>
                         <a class="btn btn-default" href="Views/Galeria.aspx">Fotos &raquo;</a>
@@ -168,15 +179,7 @@
                     </p>
                 </div>
 
-                <div class="col-md-4">
-                    <h2>COMUNICAÇÃO</h2>
-                    <p>
-                        Notifique o responsável de uma unidade sem causar atritos pessoais. A infração fica aberta para considerações de ambos.
-                    </p>
-                    <p>
-                        <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Saber mais &raquo;</a>
-                    </p>
-                </div>
+
 
                 <div class="col-md-4">
                     <h2>LIVRO DE OCORRÊNCIAS</h2>

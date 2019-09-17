@@ -45,8 +45,10 @@
   <ItemGroup>
     <Compile Include="AlbumRegraNegocios.cs" />
     <Compile Include="ApartamentoRegraNegocios.cs" />
+    <Compile Include="AtaRegraNegocios.cs" />
     <Compile Include="BuscarCepRegraNegocios.cs" />
     <Compile Include="CokieRegraNegocios.cs" />
+    <Compile Include="ComunicaoRegraNegocios.cs" />
     <Compile Include="DiretorioArquivoRegraNegocios.cs" />
     <Compile Include="EmpresaRegraNegocios.cs" />
     <Compile Include="FotoRegraNegocios.cs" />

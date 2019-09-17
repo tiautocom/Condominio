@@ -12,6 +12,7 @@
         <div class="fluploadLink">
             <asp:HiddenField ID="hfId" runat="server" />
         </div>
+
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <br />
         <asp:Label ID="lblDescricao" runat="server"></asp:Label>
@@ -20,7 +21,7 @@
             <div class="col-md-10">
                 <asp:FileUpload ID="flUpFile" runat="server" CssClass="form-control" />
                 <br />
-                <asp:Button ID="btnupLoad" runat="server" CssClass="btn btn-default" Text="Salvar" />
+                <asp:Button ID="btnUpLoad" runat="server" Text="Button" CssClass="btn btn-default" OnClick="btnUpLoad_Click" />
                 <br />
             </div>
         </div>

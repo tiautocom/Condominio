@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Apartamento.cs" />
+    <Compile Include="Ata.cs" />
+    <Compile Include="Comunicado.cs" />
     <Compile Include="Condominio.cs" />
     <Compile Include="Condomino.cs" />
     <Compile Include="Empresa.cs" />

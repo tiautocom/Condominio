@@ -20,8 +20,8 @@
                     <asp:Label runat="server" AssociatedControlID="ddlTipoAssembleia" CssClass="col-md-2 control-label">Tipo de Assembléia:</asp:Label>
                     <div class="col-md-10">
                         <asp:DropDownList ID="ddlTipoAssembleia" CssClass="form-control" runat="server" ControlToValidate="ddlTipoAssembleia" Width="100%" AppendDataBoundItems="true" Height="34px">
-                            <asp:ListItem>Ordinária</asp:ListItem>
-                            <asp:ListItem>Extraordinária</asp:ListItem>
+                            <asp:ListItem>1-Ordinária</asp:ListItem>
+                            <asp:ListItem>2-Extraordinária</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </div>
@@ -51,10 +51,10 @@
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="flUpFile" CssClass="text-danger" ErrorMessage="Campo Obrigatório." />
                     </div>
 
-                    <asp:Label runat="server" AssociatedControlID="dataGaleria" CssClass="col-md-2 control-label">Data Evento:</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="DataAssembleia" CssClass="col-md-2 control-label">Data Evento:</asp:Label>
                     <div class='col-sm-3'>
                         <div class='input-group date' id='datetimepicker1'>
-                            <asp:TextBox ID="dataGaleria" runat="server" CssClass="form-control" data-date-format="DD/MM/YYYY"></asp:TextBox>
+                            <asp:TextBox ID="DataAssembleia" runat="server" CssClass="form-control" data-date-format="DD/MM/YYYY"></asp:TextBox>
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -65,7 +65,7 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-4">
-                        <asp:Button runat="server" Text="Salvar" CssClass="btn btn-default" Width="130px" ToolTip="Salvar Dados Usuário" />
+                        <asp:Button runat="server" Text="Salvar" CssClass="btn btn-default" Width="130px" ToolTip="Salvar Dados Usuário" OnClick="Unnamed12_Click" />
                     </div>
                 </div>
 

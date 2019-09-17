@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,17 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.UpLoad
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void Salvar()
+        {
+            string filename = Path.GetFileName(flUpFile.PostedFile.FileName);
+            flUpFile.SaveAs(Server.MapPath("~/Arquivos/Imagem/Agenda/" + filename));
+        }
+
+        protected void btnUpLoad_Click(object sender, EventArgs e)
+        {
+            Salvar();
         }
     }
 }

@@ -187,6 +187,21 @@
     <Content Include="Arquivos\Imagem\Default\construcao.png" />
     <Content Include="Arquivos\Imagem\Default\default0.jpg" />
     <Content Include="Arquivos\Imagem\Default\evento.png" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\2\apasa.jpg" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\2\ARTE.png" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\2\mc1.jpg" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\2\mc2.jpg" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\2\mc3.jpg" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\2\motocar2.jpg" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\2\SESCONSP.png" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\2\SESI.png" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\3\APAS.gif" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\3\ARTE.png" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\3\logo3.png" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\3\semfoto.jpg" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\4\APAS.jpg" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\4\apasa.jpg" />
+    <Content Include="Arquivos\Imagem\Galeria\IpeAmarelo\4\SESI.png" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
@@ -198,6 +213,7 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Cadastro\AdicinarFoto.aspx" />
     <Content Include="Cadastro\Atas.aspx" />
+    <Content Include="Cadastro\AvisoComunicado.aspx" />
     <Content Include="Cadastro\Galeria.aspx" />
     <Content Include="Cadastro\Grupo.aspx" />
     <Content Include="Cadastro\LeiAcesso.aspx" />
@@ -475,6 +491,13 @@
     <Compile Include="Cadastro\Atas.aspx.designer.cs">
       <DependentUpon>Atas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro\AvisoComunicado.aspx.cs">
+      <DependentUpon>AvisoComunicado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro\AvisoComunicado.aspx.designer.cs">
+      <DependentUpon>AvisoComunicado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro\Galeria.aspx.cs">
       <DependentUpon>Galeria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -637,6 +660,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Arquivos\CNPJ\" />
+    <Folder Include="Arquivos\Imagem\Galeria\IpeAmarelo\Atas\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TI.OBJETO.TRANSFERENCIA\TI.OBJETO.TRANSFERENCIA.csproj">

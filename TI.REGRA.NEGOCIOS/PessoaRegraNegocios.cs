@@ -51,7 +51,7 @@ namespace TI.REGRA.NEGOCIOS
                 conexaoSqlServer.AdicionarParametros("@LOGIN", login);
                 conexaoSqlServer.AdicionarParametros("@SENHA", senha);
                 conexaoSqlServer.AdicionarParametros("@TOKEN", senhaSeg);
-             
+
                 DataTable dadosTabela = new DataTable();
                 dadosTabela = conexaoSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspLoginAdmin");
                 return dadosTabela;
@@ -106,12 +106,11 @@ namespace TI.REGRA.NEGOCIOS
             try
             {
                 conexaoSqlServer.LimparParametros();
-               
+
                 conexaoSqlServer.AdicionarParametros("@NOME_RAZAO", pessoa.NomeRazao);
                 conexaoSqlServer.AdicionarParametros("@CPF_CNPJ", pessoa.CpfCnpj);
                 conexaoSqlServer.AdicionarParametros("@IE", pessoa.IeRg);
                 conexaoSqlServer.AdicionarParametros("@DATA_CAD", pessoa.DataCadastro);
-             
 
                 conexaoSqlServer.AdicionarParametros("@LOGRADOURO", pessoa.Endereco.Logradouro);
                 conexaoSqlServer.AdicionarParametros("@NUMERO", pessoa.Endereco.Numero);
@@ -127,7 +126,9 @@ namespace TI.REGRA.NEGOCIOS
                 conexaoSqlServer.AdicionarParametros("@COD_SEG", pessoa.Empresa.CodigoSeguracanca);
 
                 int ret = 0;
+
                 ret = Convert.ToInt32(conexaoSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspPessoEmpresaSalvar").ToString());
+
                 return ret;
             }
             catch (Exception ex)

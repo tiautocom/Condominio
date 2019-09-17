@@ -4,7 +4,7 @@
 
 <html lang="en">
 <head runat="server">
-    <meta charset="utf-8" />
+ <%--   <meta charset="utf-8" />--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - IPÊ AMARELO</title>
 
@@ -64,6 +64,7 @@
                                 <li><a runat="server" href="~/UpLoad/Grupo.aspx">Eventos</a></li>
                                 <li><a runat="server" href="~/UpLoad/Grupo.aspx">Serviços</a></li>
                                 <li><a runat="server" href="~/Cadastro/LeiAcesso.aspx">LAC - Lei de Acesso Condominio</a></li>
+                                <li><a runat="server" href="~/Cadastro/AvisoComunicado.aspx">Avisos/ Comunicados</a></li>
                             </ul>
                         </li>
 

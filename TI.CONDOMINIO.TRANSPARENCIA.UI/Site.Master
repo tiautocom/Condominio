@@ -4,12 +4,14 @@
 
 <html lang="en">
 <head runat="server">
- <%--   <meta charset="utf-8" />--%>
+    <%--   <meta charset="utf-8" />--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - IPÊ AMARELO</title>
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="icon%20vanessa/z%20condomínio%20png%201%20(1).png" />
+
     <link href="Content/Int.css" rel="stylesheet" />
 
 </head>
@@ -36,46 +38,49 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="border-color: #e0e0e0">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="background: #0026ef; border-color: #e0e0e0">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~">
+                    <a class="navbar-brand" runat="server" href="~" style="font-weight: bold; font-family: initial;">
                         <asp:Literal ID="loginEmpresa" runat="server" />
                     </a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse" style="border-color: #e0e0e0">
                     <ul class="nav navbar-nav">
                         <%--   <li><a runat="server" href="~">Home</a></li>--%>
-                        <li><a runat="server" href="~/About">Condominio</a></li>
-                        <li><a runat="server" href="~/About">Administradora</a></li>
+                        <li><a style="font-weight: bold;" runat="server" href="~/About" rel="search" image>Condominio</a></li>
+                        <li><a style="font-weight: bold;" runat="server" href="~/About">Administradora</a></li>
+                        <li><a style="font-weight: bold;" runat="server" href="~/About">Portaria</a></li>
 
                         <li class="dropdown dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastros</a>
+                            <a style="font-weight: bold;" href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastros</a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Cadastro/Galeria.aspx">Galeria</a></li>
-                                <li><a runat="server" href="~/Cadastro/Atas.aspx">Atas</a></li>
-                                <li><a runat="server" href="~/Cadastro/Grupo.aspx">Grupos</a></li>
-                                <li><a runat="server" href="~/UpLoad/Grupo.aspx">Receitas/Despesas</a></li>
-                                <li><a runat="server" href="~/UpLoad/Grupo.aspx">Eventos</a></li>
-                                <li><a runat="server" href="~/UpLoad/Grupo.aspx">Serviços</a></li>
-                                <li><a runat="server" href="~/Cadastro/LeiAcesso.aspx">LAC - Lei de Acesso Condominio</a></li>
-                                <li><a runat="server" href="~/Cadastro/AvisoComunicado.aspx">Avisos/ Comunicados</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Cadastro/Moradores.aspx">Morador</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Cadastro/Galeria.aspx">Galeria</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Cadastro/Atas.aspx">Atas</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Cadastro/Grupo.aspx">Grupos</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/UpLoad/Grupo.aspx">Receitas/Despesas</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/UpLoad/Grupo.aspx">Eventos</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/UpLoad/Grupo.aspx">Serviços</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Cadastro/LeiAcesso.aspx">LAC - Lei de Acesso Condominio</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Cadastro/AvisoComunicado.aspx">Avisos/ Comunicados</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Cadastro/Evento.aspx">Agenda Evento</a></li>
                             </ul>
                         </li>
 
                         <li class="dropdown dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pesquisas</a>
+                            <a style="font-weight: bold;" href="#" class="dropdown-toggle" data-toggle="dropdown">Pesquisas</a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Pesquisas/LeiAcesso.aspx">Leis</a></li>
-                                <%--   <li><a runat="server" href="~/Pesquisas/Transparencias.aspx">Transparências</a></li>--%>
-                                <%--    <li><a runat="server" href="~/Cadastro/Grupo.aspx">Grupos</a></li>
-                                <li><a runat="server" href="~/UpLoad/Grupo.aspx">Receitas/Despesas</a></li>
-                                <li><a runat="server" href="~/UpLoad/Grupo.aspx">Eventos</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Pesquisas/LeiAcesso.aspx">Leis</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Pesquisas/Transparencias.aspx">Transparências</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Pesquisas/Atas.aspx">Atas</a></li>
+                                <li><a style="color: #0026ff;" runat="server" href="~/Views/ListaMoradores.aspx">Morador</a></li>
+                                <%--               <li><a runat="server" href="~/UpLoad/Grupo.aspx">Eventos</a></li>
                                 <li><a runat="server" href="~/UpLoad/Grupo.aspx">Serviços</a></li>
                                 <li><a runat="server" href="~/Cadastro/LeiAcesso.aspx">LAC - Lei de Acesso Condominio</a></li>--%>
                             </ul>
@@ -86,7 +91,7 @@
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                                <li><a style="font-weight: bold;" runat="server" href="~/Account/Login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
@@ -113,9 +118,10 @@
 
 
                 <div class="footer-copyright text-center py-3">
-                    © 2018 TI Solutions Commerce:
-                         <a href="Account/Login.aspx">Login Administrador</a>
-                    <%--    <p>&copy; <%: DateTime.Now.Year %> - TI - Solutions Commerce</p>--%>
+                    © 2020 TI Solutions Commerce: 
+                        <%-- <a href="Account/Login.aspx">Login Administrador</a>--%>
+                    <p>versão:10-06</p>
+                    <p style="font-size: 10px">Desenvolvedor: A.LINO</p>
                 </div>
                 <!-- Copyright -->
 
@@ -123,5 +129,6 @@
             <!-- Footer -->
         </div>
     </form>
+    <%--<link href="vendor/bootstrap/css/booststrap1.css" rel="stylesheet" />--%>
 </body>
 </html>

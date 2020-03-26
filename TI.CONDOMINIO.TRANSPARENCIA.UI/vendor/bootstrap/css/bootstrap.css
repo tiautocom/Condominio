@@ -4,6 +4,14 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/*.adriano{
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    color: rgb(0, 38, 255);*/
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -165,6 +173,7 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  
 }
 
 a:hover {
@@ -208,6 +217,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  border-radius:10px;
 }
 
 svg:not(:root) {
@@ -617,6 +627,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  padding:5px;
 }
 
 .col {
@@ -3994,6 +4005,9 @@ input[type="button"].btn-block {
   -ms-flex-align: center;
   align-items: center;
 }
+/*.navbar-inverse .navbar-toggle:hover{
+    background:#0026ef;*/
+}
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -4006,6 +4020,7 @@ input[type="button"].btn-block {
 
 .navbar-toggler:hover, .navbar-toggler:focus {
   text-decoration: none;
+  background:#0026ef;
 }
 
 .navbar-toggler:not(:disabled):not(.disabled) {
@@ -8978,4 +8993,13 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+/*.adriano{
+   
+    color: rgb(0, 38, 255);
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight:bold;
+}*/
 /*# sourceMappingURL=bootstrap.css.map */

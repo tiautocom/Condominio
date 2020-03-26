@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Adicionar Foto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdicinarFoto.aspx.cs" Inherits="TI.CONDOMINIO.TRANSPARENCIA.UI.Cadastro.AdicinarFoto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
     <div class="shadowBox">
         <div class="page-container">
 

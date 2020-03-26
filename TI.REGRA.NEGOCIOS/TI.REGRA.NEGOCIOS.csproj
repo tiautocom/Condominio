@@ -51,6 +51,7 @@
     <Compile Include="ComunicaoRegraNegocios.cs" />
     <Compile Include="DiretorioArquivoRegraNegocios.cs" />
     <Compile Include="EmpresaRegraNegocios.cs" />
+    <Compile Include="EventoRegraNegocios.cs" />
     <Compile Include="FotoRegraNegocios.cs" />
     <Compile Include="FtpRegraNegocios.cs" />
     <Compile Include="GaleriaRegraNegocios.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="TransparenciaRegraNegocios.cs" />
     <Compile Include="UsuarioRegraNegocios.cs" />
     <Compile Include="ValidarRegraNegocios.cs" />
+    <Compile Include="VeiculoRegraNegocios.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TI.ACESSO.DADOS\TI.ACESSO.DADOS.csproj">

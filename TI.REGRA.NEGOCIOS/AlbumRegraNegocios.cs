@@ -19,7 +19,7 @@ namespace TI.REGRA.NEGOCIOS
                 StringBuilder sb = new StringBuilder();
 
                 sb.Append("<a class='example-image-link' style='height: 500px; width: 500px;' href='" + urlBanco + "' data-lightbox='example-set' data-title='" + titulo + "'>");
-                sb.Append("<img class='example-image' style='height: 200px; width: 375px;' src='" + urlBanco + "' alt='' />");
+                sb.Append("<img class='example-image' style='height: 200px; width: 300px;' src='" + urlBanco + "' alt='' />");
                 sb.Append("</a>");
                 sb.Append("&nbsp");
 

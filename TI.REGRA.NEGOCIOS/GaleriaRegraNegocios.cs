@@ -40,7 +40,7 @@ namespace TI.REGRA.NEGOCIOS
                 sb.Append("<ul class='media-list main-list'>");
                 sb.Append("<li class='media'>");
                 sb.Append("<a class='pull-left' href='/Views/Album.aspx?Id=" + id + "&Galeria=" + titulo + "'>");
-                sb.Append("<img class='media-object' src='" + url + "' style='height: 150px; width: 170px;' alt='...'>");
+                sb.Append("<img class='media-object' src='" + url + "' style='height: 200px; width: 349px;' alt='...'>");
                 sb.Append("</a>");
                 sb.Append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class='media-body'>");
                 sb.Append("<h4 class='media-heading'>" + titulo + "</h4>");

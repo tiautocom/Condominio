@@ -5,14 +5,25 @@
     <div class="row">
         <h3>Contato da Comissão de Sindicos</h3>
         <address>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399<br />
-            <abbr title="Phone">P:</abbr>
-            425.555.0100
+                        <p>
+                            Vitta Residencial Ipê Amarelo
+                <br />
+                            Localizado na Av. Prof. Gustavo Fleury Chamillot, 372 - Jardim Res. Paraiso, 
+                <br />
+                            Araraquara-SP CEP: 14804-012
+                <br />
+                            Bairro: Vila dos Ipês
+                <br />
+                            Fone: (16) 3357-2972
+                <br />
+                            Mudanças e Entregas: 08:00 as 16:00 Hs.<br />
+
+                        </p>
         </address>
 
         <address>
-            <strong>Admnistradora:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+           <strong>E-Mail:</strong>
+                            <a href="mailto:contato@ipeamarelo.com.br">contato@ipeamarelo.com.br</a><br />
         </address>
     </div>
     <div class="row">

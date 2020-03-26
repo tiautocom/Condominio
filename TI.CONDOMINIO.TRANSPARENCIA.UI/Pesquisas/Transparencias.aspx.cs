@@ -31,7 +31,7 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Pesquisas
             fantasia = CookieFantasia.Value;
 
             idLai = Convert.ToInt32(Session["IdLai"]);
-            DesLai.Text = Session["DescLai"].ToString();
+            // DesLai.Text = Session["DescLai"].ToString();
 
             Listar();
         }
@@ -133,7 +133,7 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Pesquisas
 
                         GerarDiretorio();
 
-                        string street = this.Server.MapPath("~\\Arquivos\\Imagem\\Galeria\\" + fantasia + "\\" + idTransp + "\\"  + url);
+                        string street = this.Server.MapPath("~\\Arquivos\\Imagem\\Galeria\\" + fantasia + "\\" + idTransp + "\\" + url);
 
                         if (!File.Exists(street))
                         {
@@ -217,7 +217,7 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Pesquisas
                 Directory.CreateDirectory(Server.MapPath("~\\Arquivos\\"));
                 Directory.CreateDirectory(Server.MapPath("~\\Arquivos\\Imagem\\"));
                 Directory.CreateDirectory(Server.MapPath("~\\Arquivos\\Imagem\\Galeria\\" + fantasia));
-                Directory.CreateDirectory(Server.MapPath("~\\Arquivos\\Imagem\\Galeria\\" + fantasia + "\\" ));
+                Directory.CreateDirectory(Server.MapPath("~\\Arquivos\\Imagem\\Galeria\\" + fantasia + "\\"));
                 Directory.CreateDirectory(Server.MapPath("~\\Arquivos\\Imagem\\Galeria\\" + fantasia + "\\" + idTransp));
             }
             catch (IndexOutOfRangeException ex)

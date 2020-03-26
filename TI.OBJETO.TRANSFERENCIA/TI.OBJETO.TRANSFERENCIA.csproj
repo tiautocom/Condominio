@@ -45,11 +45,15 @@
     <Compile Include="Comunicado.cs" />
     <Compile Include="Condominio.cs" />
     <Compile Include="Condomino.cs" />
+    <Compile Include="Convidado.cs" />
     <Compile Include="Empresa.cs" />
     <Compile Include="Endereco.cs" />
+    <Compile Include="Eventos.cs" />
     <Compile Include="GaleriaFoto.cs" />
     <Compile Include="Grupos.cs" />
     <Compile Include="Leis.cs" />
+    <Compile Include="Morador.cs" />
+    <Compile Include="MoradorDepedente.cs" />
     <Compile Include="Mudancas.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Prestador.cs" />
@@ -58,6 +62,7 @@
     <Compile Include="Telefone.cs" />
     <Compile Include="Tranparencias.cs" />
     <Compile Include="Usuarios.cs" />
+    <Compile Include="Veiculo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TI.ACESSO.DADOS\TI.ACESSO.DADOS.csproj">

@@ -15,6 +15,7 @@ namespace TI.OBJETO.TRANSFERENCIA
         public string Sindico { get; set; }
         public string SubSindico { get; set; }
         public string TipoAssembleia { get; set; }
+        public int IdEmpresa { get; set; }
         public string Url { get; set; }
         public string Descricao { get; set; }
     }

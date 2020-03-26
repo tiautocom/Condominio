@@ -12,7 +12,7 @@
             </p>
             <hr />
 
-            <div id="divs">
+            <div id="divs" style="background-color:#dddddd;">
 
                 <div class="row">
                     <div class="col-md-12">
@@ -146,8 +146,12 @@
 
                 <div class="form-group">
                     <div class="col-lg-10 ">
-                        <asp:LinkButton ID="LinkButton1" CssClass="hotpink" runat="server">Voltar Página</asp:LinkButton>
+                        <%--<asp:LinkButton ID="LinkButton1" CssClass="hotpink" runat="server">Voltar Página</asp:LinkButton>--%>
+                        <%--<asp:LinkButton ID="lkbVoltarPagina" runat="server" OnClick="lkbVoltarPagina_Click">Voltar Página</asp:LinkButton>--%>
+                    <input type="button" value="« voltar pagina" onclick="goBack()" style="border-color: #cccccc; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: normal; line-height: 1.428571429 text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; border: 1px solid transparent; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;" />
+
                     </div>
+                    
                 </div>
 
                 <br />
@@ -190,5 +194,11 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
     <link href="../vendor/bootstrap/Condominio/Cond.css" rel="stylesheet" />
-
+    <%-- SCRIPT VOLTAR--%>
+    <script>
+        function goBack()
+        {
+            window.history.back()
+        }
+    </script>
 </asp:Content>

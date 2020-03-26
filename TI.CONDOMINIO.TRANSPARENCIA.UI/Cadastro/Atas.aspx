@@ -33,6 +33,12 @@
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Titulo" CssClass="text-danger" ErrorMessage="Campo Obrigatório." />
                     </div>
 
+                    <asp:Label runat="server" AssociatedControlID="Descricao" CssClass="col-md-2 control-label">Descrição:</asp:Label>
+                    <div class="col-md-10">
+                        <asp:TextBox runat="server" ID="Descricao" CssClass="form-control" TextMode="MultiLine" Width="100%" />
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Descricao" CssClass="text-danger" ErrorMessage="Campo Obrigatório." />
+                    </div>
+
                     <asp:Label runat="server" AssociatedControlID="Sindico" CssClass="col-md-2 control-label">Sindico:</asp:Label>
                     <div class="col-md-10">
                         <asp:TextBox runat="server" ID="Sindico" CssClass="form-control" TextMode="Search" Width="100%" />

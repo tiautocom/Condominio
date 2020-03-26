@@ -12,12 +12,14 @@
         </div>
 
         <div class="row">
+            <div id="IdDiv" align="center">
             <div class="col-md-12">
 
-                <section>
+                <section style="width:100%">
                     <asp:PlaceHolder ID="iframeObras" runat="server" />
                 </section>
 
+                </div>
             </div>
         </div>
 

@@ -13,5 +13,18 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Views
         {
 
         }
+
+        public void Listar()
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

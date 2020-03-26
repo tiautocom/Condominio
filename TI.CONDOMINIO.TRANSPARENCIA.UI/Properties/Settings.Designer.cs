@@ -26,8 +26,8 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-R3RP8K6\\SQL;Initial Catalog=CONDOMINIO;Integrated Security=Tr" +
-            "ue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SHJHJ78\\SQLEXPRESS;Initial Catalog=CONDOMINIO;Integrated Secu" +
+            "rity=True")]
         public string DefaultConnection {
             get {
                 return ((string)(this["DefaultConnection"]));

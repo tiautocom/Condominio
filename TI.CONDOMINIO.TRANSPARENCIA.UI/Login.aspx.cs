@@ -34,7 +34,9 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
         {
             Session["Login"] = login = txtLogin.Text.Trim();
             Session["Senha"] = senha = txtPassword.Text.Trim();
-            Session["Token"] = null;
+            Session["Token"] = senha.Trim();
+
+            token = senha;
 
             Logar();
         }
@@ -51,20 +53,23 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
                 {
                     FailureText.Text = "Atenção, Campo Senha não Pode ser Nulo ou Vázio.";
                 }
-                else if (token == null)
-                {
-                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModal", "$('#mymodal').modal();", true);
-                }
+                //else if (token == null)
+                //{
+                //    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModal", "$('#mymodal').modal();", true);
+                //}
                 else
                 {
                     pessoaRegraNegocios = new PessoaRegraNegocios();
                     dadosTabela = new DataTable();
 
-                    dadosTabela = pessoaRegraNegocios.PesquisarEmpresa(login, senha, token);
+                    //dadosTabela = pessoaRegraNegocios.PesquisarEmpresa(login, senha);
+
+                    dadosTabela = pessoaRegraNegocios.LoginMorador(login, senha);
 
                     if (dadosTabela.Rows.Count > 0)
                     {
-                        idUsuario = Convert.ToInt32(dadosTabela.Rows[0]["IdPessoa"].ToString().Trim());
+                        idUsuario = Convert.ToInt32(dadosTabela.Rows[0]["Id"].ToString().Trim());
+
                         fantasia = dadosTabela.Rows[0]["NomeFantasia"].ToString().Trim();
 
                         GerarCookies();
@@ -72,6 +77,7 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
                         LerCookie();
 
                         Session.Clear();
+
                         Session.Abandon();
 
                         Response.Redirect("~/Default.aspx", false);

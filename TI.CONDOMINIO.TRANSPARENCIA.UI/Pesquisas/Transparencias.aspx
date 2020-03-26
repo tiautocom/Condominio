@@ -151,7 +151,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <asp:Button ID="btnsalvarUpload" runat="server" class="btn btn-primary" Text="Salvar Arquivos" EnableEventValidation="false" OnClick="btnsalvarUpload_Click"/>
+                        <asp:Button ID="btnsalvarUpload" runat="server" class="btn btn-primary" Text="Salvar Arquivos" EnableEventValidation="false" OnClick="btnsalvarUpload_Click" />
                     </div>
                 </div>
 

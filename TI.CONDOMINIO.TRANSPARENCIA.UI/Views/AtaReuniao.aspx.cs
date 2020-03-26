@@ -13,5 +13,10 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Views
         {
 
         }
+
+        protected void lkbVoltarPagina_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

@@ -62,6 +62,43 @@ namespace TI.REGRA.NEGOCIOS
             }
         }
 
+        public DataTable LoginMorador(string login, string senha)
+        {
+            try
+            {
+                conexaoSqlServer.LimparParametros();
+                conexaoSqlServer.AdicionarParametros("@CELULAR", login);
+                conexaoSqlServer.AdicionarParametros("@CPF", senha);
+
+                DataTable dadosTabela = new DataTable();
+                dadosTabela = conexaoSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspLoginMorador");
+                return dadosTabela;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public DataTable PesquisarEmpresa(string login, string senha)
+        {
+            try
+            {
+                conexaoSqlServer.LimparParametros();
+                conexaoSqlServer.AdicionarParametros("@LOGIN", login);
+                conexaoSqlServer.AdicionarParametros("@SENHA", senha);
+         
+
+                DataTable dadosTabela = new DataTable();
+                dadosTabela = conexaoSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspLoginAdminastracao");
+                return dadosTabela;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public DataTable PesquisarEmpresaId(int idEmpresa, string bloco, string andar, string apto)
         {
             try

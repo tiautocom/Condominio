@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -184,6 +185,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
+    <Content Include="Arquivos\CNPJ\PATH_CNPJ.xml" />
     <Content Include="Arquivos\Imagem\Default\construcao.png" />
     <Content Include="Arquivos\Imagem\Default\default0.jpg" />
     <Content Include="Arquivos\Imagem\Default\evento.png" />
@@ -214,10 +216,15 @@
     <Content Include="Cadastro\AdicinarFoto.aspx" />
     <Content Include="Cadastro\Atas.aspx" />
     <Content Include="Cadastro\AvisoComunicado.aspx" />
+    <Content Include="Cadastro\Convidados.aspx" />
+    <Content Include="Cadastro\Evento.aspx" />
     <Content Include="Cadastro\Galeria.aspx" />
     <Content Include="Cadastro\Grupo.aspx" />
     <Content Include="Cadastro\LeiAcesso.aspx" />
+    <Content Include="Cadastro\ListaConvidado.aspx" />
+    <Content Include="Cadastro\Moradores.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\BootConvidado.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Int.css" />
@@ -343,13 +350,19 @@
     <Content Include="fonts\raleway\OFL.txt" />
     <Content Include="Galerias\Fotos.aspx" />
     <Content Include="Galerias\HtmlPage1.html" />
+    <Content Include="icon vanessa\z condomínio png 1 %281%29.png" />
+    <Content Include="icon vanessa\z condomínio png 1.png" />
     <Content Include="Login.aspx" />
+    <Content Include="login2.css" />
+    <Content Include="Pesquisas\Atas.aspx" />
     <Content Include="Pesquisas\LeiAcesso.aspx" />
+    <Content Include="Pesquisas\ListarConvidado.aspx" />
     <Content Include="Pesquisas\Transparencias.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\CSS\agenda.css" />
     <Content Include="Scripts\Eventos.css" />
     <Content Include="Scripts\Galeria.css" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -403,6 +416,7 @@
     <Content Include="UpLoad\Grupo.aspx" />
     <Content Include="vendor\bootstrap\Condominio\Cond.css" />
     <Content Include="vendor\bootstrap\css\4-col-portfolio.css" />
+    <Content Include="vendor\bootstrap\css\booststrap1.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
@@ -425,11 +439,15 @@
     <Content Include="vendor\select2\select2.min.css" />
     <Content Include="vendor\select2\select2.min.js" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\AgendaEventos.aspx" />
     <Content Include="Views\Album.aspx" />
     <Content Include="Views\AtaReuniao.aspx" />
+    <Content Include="Views\Atas.aspx" />
     <Content Include="Views\Contato.aspx" />
     <Content Include="Views\Evento.aspx" />
     <Content Include="Views\Galeria.aspx" />
+    <Content Include="Views\ListaMoradores.aspx" />
+    <Content Include="Views\Moradores.aspx" />
     <Content Include="Views\Mudanca.aspx" />
     <Content Include="Views\ReceitasDespesas.aspx" />
     <Content Include="Bundle.config" />
@@ -498,6 +516,20 @@
     <Compile Include="Cadastro\AvisoComunicado.aspx.designer.cs">
       <DependentUpon>AvisoComunicado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro\Convidados.aspx.cs">
+      <DependentUpon>Convidados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro\Convidados.aspx.designer.cs">
+      <DependentUpon>Convidados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\Evento.aspx.cs">
+      <DependentUpon>Evento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro\Evento.aspx.designer.cs">
+      <DependentUpon>Evento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro\Galeria.aspx.cs">
       <DependentUpon>Galeria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -518,6 +550,20 @@
     </Compile>
     <Compile Include="Cadastro\LeiAcesso.aspx.designer.cs">
       <DependentUpon>LeiAcesso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\ListaConvidado.aspx.cs">
+      <DependentUpon>ListaConvidado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro\ListaConvidado.aspx.designer.cs">
+      <DependentUpon>ListaConvidado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\Moradores.aspx.cs">
+      <DependentUpon>Moradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro\Moradores.aspx.designer.cs">
+      <DependentUpon>Moradores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -565,12 +611,26 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Pesquisas\Atas.aspx.cs">
+      <DependentUpon>Atas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pesquisas\Atas.aspx.designer.cs">
+      <DependentUpon>Atas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pesquisas\LeiAcesso.aspx.cs">
       <DependentUpon>LeiAcesso.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pesquisas\LeiAcesso.aspx.designer.cs">
       <DependentUpon>LeiAcesso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisas\ListarConvidado.aspx.cs">
+      <DependentUpon>ListarConvidado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pesquisas\ListarConvidado.aspx.designer.cs">
+      <DependentUpon>ListarConvidado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pesquisas\Transparencias.aspx.cs">
       <DependentUpon>Transparencias.aspx</DependentUpon>
@@ -607,6 +667,13 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\AgendaEventos.aspx.cs">
+      <DependentUpon>AgendaEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AgendaEventos.aspx.designer.cs">
+      <DependentUpon>AgendaEventos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Album.aspx.cs">
       <DependentUpon>Album.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -620,6 +687,13 @@
     </Compile>
     <Compile Include="Views\AtaReuniao.aspx.designer.cs">
       <DependentUpon>AtaReuniao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Atas.aspx.cs">
+      <DependentUpon>Atas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Atas.aspx.designer.cs">
+      <DependentUpon>Atas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Contato.aspx.cs">
       <DependentUpon>Contato.aspx</DependentUpon>
@@ -642,6 +716,20 @@
     <Compile Include="Views\Galeria.aspx.designer.cs">
       <DependentUpon>Galeria.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListaMoradores.aspx.cs">
+      <DependentUpon>ListaMoradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ListaMoradores.aspx.designer.cs">
+      <DependentUpon>ListaMoradores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moradores.aspx.cs">
+      <DependentUpon>Moradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moradores.aspx.designer.cs">
+      <DependentUpon>Moradores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Mudanca.aspx.cs">
       <DependentUpon>Mudanca.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -659,7 +747,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Arquivos\CNPJ\" />
+    <Folder Include="Arquivos\Documentos\Atas\" />
     <Folder Include="Arquivos\Imagem\Galeria\IpeAmarelo\Atas\" />
   </ItemGroup>
   <ItemGroup>

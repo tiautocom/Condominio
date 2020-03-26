@@ -1,4 +1,4 @@
-﻿body {
+﻿/*body {
     background: linear-gradient(132deg, #f44336, #E91E63, #9C27B0, #673AB7, #3F51B5, #2196F3,#03A9F4, #00BCD4, #009688, #4CAF50, #FFC107, #FF9800, #f44336, #E91E63, #9C27B0, #673AB7, #3F51B5, #2196F3,#03A9F4, #00BCD4, #009688, #4CAF50, #FFC107, #FF9800);
     background-size: 400% 400%;
     animation: BackgroundGradient 30s ease infinite;
@@ -31,6 +31,7 @@
     height: 300px;
     padding: 10px;
     margin: 50px auto;
+    border-radius:5px;
 }
 
 .loginbaslik {
@@ -67,4 +68,4 @@
 
 body {
     margin: 0;
-}
+}*/

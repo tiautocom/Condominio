@@ -57,6 +57,32 @@ namespace TI.REGRA.NEGOCIOS
             }
         }
 
+        public DataTable ListarConvidados(int idMorador)
+        {
+            try
+            {
+                DataTable dadosTabela = new DataTable();
+
+                if (idMorador == 0)
+                {
+                    conexaoSqlServer.LimparParametros();
+                    dadosTabela = conexaoSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspListarConvidadosAll");
+                }
+                else
+                {
+                    conexaoSqlServer.LimparParametros();
+                    conexaoSqlServer.AdicionarParametros("@Id", idMorador);
+                    dadosTabela = conexaoSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspListarConvidadosIdMorador");
+                }
+
+                return dadosTabela;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public DataTable ListarMoradores()
         {
             try
@@ -86,6 +112,40 @@ namespace TI.REGRA.NEGOCIOS
 
                 int ret = 0;
                 ret = Convert.ToInt32(conexaoSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspSalvarMoradorDepedente").ToString());
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public DataTable ListarTipoVisitante()
+        {
+            try
+            {
+                conexaoSqlServer.LimparParametros();
+                DataTable dadosTabela = new DataTable();
+                dadosTabela = conexaoSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspListarMoradorVistante");
+                return dadosTabela;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public int DeletarConvidados(int id, int idMorador)
+        {
+            try
+            {
+                conexaoSqlServer.LimparParametros();
+
+                conexaoSqlServer.AdicionarParametros("@Id", id);
+                conexaoSqlServer.AdicionarParametros("@IdMorador", idMorador);
+
+                int ret = 0;
+                ret = Convert.ToInt32(conexaoSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspConvidadoDeletar").ToString());
                 return ret;
             }
             catch (Exception ex)
@@ -149,6 +209,28 @@ namespace TI.REGRA.NEGOCIOS
 
                 int ret = 0;
                 ret = Convert.ToInt32(conexaoSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspSalvarMorador").ToString());
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public int SalvarConvidado(Morador morador)
+        {
+            try
+            {
+                conexaoSqlServer.LimparParametros();
+
+                conexaoSqlServer.AdicionarParametros("@Id_Morador", morador.MoradorVisitante.IdMorador);
+                conexaoSqlServer.AdicionarParametros("@Id_Tipo_Visitante", morador.MoradorVisitante.IdTipoVisitante);
+                conexaoSqlServer.AdicionarParametros("@Nome_Visitante", morador.MoradorVisitante.Nome);
+                conexaoSqlServer.AdicionarParametros("@Obs", morador.MoradorVisitante.Observacao);
+                conexaoSqlServer.AdicionarParametros("@Dt_Autorizacao", morador.MoradorVisitante.DataAutorizacao);
+
+                int ret = 0;
+                ret = Convert.ToInt32(conexaoSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspSalvarMoradorConvidado").ToString());
                 return ret;
             }
             catch (Exception ex)

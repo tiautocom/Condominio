@@ -97,8 +97,8 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Views
             }
             catch (Exception ex)
             {
-
-                throw;
+                Session["Error"] = ex.Message;
+                Response.Redirect("~/Error.aspx", false);
             }
         }
     }

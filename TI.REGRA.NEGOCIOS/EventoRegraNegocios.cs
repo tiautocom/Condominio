@@ -55,6 +55,7 @@ namespace TI.REGRA.NEGOCIOS
                 sb.Append("<li class='list-inline-item'><i class='fa fa-calendar-o' aria-hidden='true'></i> " + dataSem + "</li>");
                 sb.Append("<li class='list-inline-item'><i class='fa fa-clock-o' aria-hidden='true'></i> " + hIni + " PM - " + hFim + " PM</li>");
                 sb.Append("<li class='list-inline-item'><i class='fa fa-location-arrow' aria-hidden='true'></i> " + local + "</li>");
+                sb.Append("<li class='list-inline-item'><i class='fa fa-list' aria-hidden='true'></i> <a href='/Pesquisas/ListarConvidado.aspx'>LISTA DE CONVIDADOS</a> </li>");
                 sb.Append("</ul>");
                 sb.Append("<p>" + obs + "</p>");
                 sb.Append("</div>");

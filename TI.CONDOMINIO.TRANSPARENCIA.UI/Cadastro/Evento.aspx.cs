@@ -12,18 +12,44 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Cadastro
 {
     public partial class Evento : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                idUsuario = Convert.ToInt32(Session["IdUsaurio"]);
-            }
-        }
+        #region CLASSES E OBJETOS
 
         Eventos evento;
         EventoRegraNegocios eventoRegraNegocios;
 
-        public int idUsuario, idMorador = 0;
+        #endregion
+
+        #region VARIAVEIS
+
+        public int idUsuario, idMorador = 0; 
+      
+        #endregion
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            LerCookie();
+        }
+
+        private void LerCookie()
+        {
+            try
+            {
+                //Cria o obj cookie e recebe o IdUsuario
+                HttpCookie cookieU = new HttpCookie("idUsuario");
+                cookieU = Request.Cookies["idUsuario"];
+                idUsuario = Convert.ToInt32(cookieU.Value.ToString());
+
+                //Cria o obj cookie e recebe o IdUsuario
+                HttpCookie cookieMorador = new HttpCookie("idMorador");
+                cookieMorador = Request.Cookies["idMorador"];
+                idMorador = Convert.ToInt32(cookieMorador.Value.ToString());
+            }
+            catch
+            {
+                idUsuario = 0;
+                idMorador = 0;
+            }
+        }
 
         public void SalvarEvento()
         {
@@ -82,7 +108,7 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Cadastro
                     {
                         Response.Write("<script>alert('Evento Cadastrado com Sucesso.'); window.location.href = window.location.href;</script>");
 
-                        Response.Redirect("~/Cadastro/ListaConvidado.aspx", false);
+                        Response.Redirect("~/Views/AgendaEventos.aspx", false);
                     }
                     else
                     {

@@ -2,68 +2,126 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+    <script>
+        function funcaoQueExibeModal() {
+            $('#modalConvidado').modal();
+        }
+    </script>
+
     <div class="page-container">
         <div class="container">
             <hr />
             <h3>Lista de Convidados</h3>
+            <p>
+                <asp:Literal ID="loginMorador" runat="server" />
+            </p>
             <hr />
 
             <%--GRID  MORADOR--%>
             <div class="row">
 
-
                 <div class="col-lg-12">
                     <div class="table-responsive">
-                        <asp:GridView ID="gdvMorador" runat="server" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" DataKeyNames="Id,Nome,Obs">
+
+                        <asp:GridView ID="gdvVisitantes" runat="server" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" EmptyDataText="Não há registros de dados para exibir.">
                             <Columns>
-                                <asp:BoundField DataField="Id" HeaderText="Id" />
 
-                                <asp:TemplateField HeaderText="Nome">
-                                    <EditItemTemplate>
-                                        <asp:TextBox ID="TextBox1" runat="server" Width="100%" Text='<%# Bind("Nome") %>'></asp:TextBox>
-                                    </EditItemTemplate>
+                                <asp:TemplateField Visible="false" HeaderText="ID">
                                     <ItemTemplate>
-                                        <asp:TextBox ID="TextBox4" runat="server" Width="100%"></asp:TextBox>
+                                        <asp:Label ID="HyperLink1" runat="server" Text='<%# Eval("ID") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Observação">
+                                <asp:TemplateField>
                                     <EditItemTemplate>
-                                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Obs") %>'></asp:TextBox>
+                                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                                     </EditItemTemplate>
                                     <ItemTemplate>
-                                        <asp:TextBox ID="TextBox3" runat="server" Width="100%"></asp:TextBox>
+                                        <asp:Image ID="Image1" runat="server" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
+
+                                <asp:TemplateField FooterStyle-CssClass="table" HeaderText="Nome Titular">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lblDescricao" Width="300px" runat="server" Text='<%# Eval("Nome_Visitante") %>' CommandName="SelecionarTitular"></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <FooterStyle CssClass="table" />
+                                    <ItemStyle Width="100%" HorizontalAlign="Center" Height="30px" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField FooterStyle-CssClass="table" HeaderText="Tipo Convidado">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblTipo" Width="300px" runat="server" Text='<%# Eval("Tipo_M_V") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <FooterStyle CssClass="table" />
+                                    <ItemStyle Width="100%" HorizontalAlign="Center" Height="30px" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField FooterStyle-CssClass="table" HeaderText="Observação">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lblObs" Width="300px" runat="server" Text='<%# Eval("Obs") %>'></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <FooterStyle CssClass="table" />
+                                    <ItemStyle Width="100%" HorizontalAlign="Center" Height="30px" />
+                                </asp:TemplateField>
+
                             </Columns>
-                            <FooterStyle BackColor="#CCCC99" />
-                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="Black" />
-                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                            <RowStyle BackColor="#F7F7DE" />
-                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                            <SortedAscendingHeaderStyle BackColor="#848384" />
-                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                            <SortedDescendingHeaderStyle BackColor="#575357" />
-
                         </asp:GridView>
-                    </div>
-                </div>
 
-                <div class="form-group">
-                    <div class="col-md-10">
+                    </div>
+
+                    <div class="form-group">
                         <asp:Button runat="server"
-                            Text="Salvar" CssClass="btn btn-default" ToolTip="Salvar Dados Usuário" />
+                            Text="Novo de Convidados" CssClass="btn btn-default" ToolTip="Cadastro de Convidados" data-toggle="modal" data-target="#modalConvidado" OnClick="Unnamed1_Click" />
                     </div>
 
                 </div>
 
+            </div>
 
-<%--                <div class="col-lg-10 ">
-                    <b>
-                        <asp:Label ID="lblLogin" CssClass="text-success" runat="server" Text="OPERADOR(A): ..."></asp:Label>
-                    </b>
-                </div>--%>
+            <!-- Modal DEPEDENTE -->
+            <div class="modal fade" id="modalConvidado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Adicionar Convidados</h3>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="form-group">
+
+                                <asp:Label runat="server" AssociatedControlID="txtNome" CssClass="col-md-4 control-label">Nome Convidado(a)</asp:Label>
+                                <div class="col-md-12">
+                                    <asp:TextBox runat="server" ID="txtNome" CssClass="form-control" TextMode="Search" Width="100%" />
+                                </div>
+
+
+                                <asp:Label runat="server" AssociatedControlID="ddTipo" CssClass="col-md-4 control-label">Tipo de Convidado</asp:Label>
+                                <div class="col-md-12">
+                                    <asp:DropDownList ID="ddTipo" CssClass="form-control" runat="server" ControlToValidate="ddTipo" Width="100%" AppendDataBoundItems="true" Height="34px">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <asp:Label runat="server" AssociatedControlID="txtObs" CssClass="col-md-2 control-label">Observação</asp:Label>
+                                <div class="col-md-12">
+                                    <asp:TextBox runat="server" ID="txtObs" CssClass="form-control" TextMode="MultiLine" Rows="5" Width="100%" />
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <br />
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #428bca; border-color: #428bca; color: white;">Fechar</button>
+                            <asp:Button ID="btnSalvarDepedente" runat="server" Text="Salvar" class="btn btn-primary" Style="background-color: mediumseagreen; border-color: mediumseagreen" OnClick="SalvaVisitante_Click"/>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>

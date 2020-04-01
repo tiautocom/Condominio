@@ -23,5 +23,8 @@ namespace TI.OBJETO.TRANSFERENCIA
         public string Celular { get; set; }
         public string Comercial { get; set; }
         public bool Status { get; set; }
+        public int IdEmpresa { get; set; }
+
+        public MoradorVisitante MoradorVisitante { get; set; }
     }
 }

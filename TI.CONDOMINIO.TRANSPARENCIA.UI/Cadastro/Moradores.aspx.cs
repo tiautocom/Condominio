@@ -14,9 +14,29 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Cadastro
         Morador morador;
         MoradorRegraNegocios moradorRegraNegocios;
 
+        public int idUsuario = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                LerCookie();
+            }
+        }
 
+        private void LerCookie()
+        {
+            try
+            {
+                //Cria o obj cookie e recebe o IdUsuario
+                HttpCookie cookieU = new HttpCookie("idUsuario");
+                cookieU = Request.Cookies["idUsuario"];
+                idUsuario = Convert.ToInt32(cookieU.Value.ToString());
+            }
+            catch
+            {
+                idUsuario = 0;
+            }
         }
 
         protected void Unnamed23_Click(object sender, EventArgs e)
@@ -43,6 +63,7 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI.Cadastro
                 morador.Telefone = Telefone.Text.Trim();
                 morador.Celular = Celular.Text.Trim();
                 morador.Comercial = Comercial.Text.Trim();
+                morador.IdEmpresa = idUsuario;
 
                 if (ddlAtivo.SelectedValue == "1")
                     morador.Status = true;

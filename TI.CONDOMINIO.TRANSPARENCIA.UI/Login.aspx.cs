@@ -13,8 +13,8 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
     {
         #region VARIAVEIS
 
-        public int idUsuario = 0;
-        public string login, senha, token, fantasia = "";
+        public int idUsuario, idMorador = 0;
+        public string login, senha, token, fantasia, nomeMorador, aptoMorador, blocoMorador, torreMorador = "";
 
         #endregion
 
@@ -71,6 +71,10 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
                         idUsuario = Convert.ToInt32(dadosTabela.Rows[0]["Id"].ToString().Trim());
 
                         fantasia = dadosTabela.Rows[0]["NomeFantasia"].ToString().Trim();
+                        nomeMorador = dadosTabela.Rows[0]["Titular"].ToString().Trim();
+                        torreMorador = dadosTabela.Rows[0]["Torre"].ToString().Trim();
+                        blocoMorador = dadosTabela.Rows[0]["Bloco"].ToString().Trim();
+                        aptoMorador = dadosTabela.Rows[0]["Apto"].ToString().Trim();
 
                         GerarCookies();
 
@@ -205,7 +209,7 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
 
                 #endregion
 
-                #region SENHA
+                #region TOKEN
 
                 //Cria a estancia do obj HttpCookie passando o nome do mesmo
                 HttpCookie cookieToken = new HttpCookie("Token");
@@ -236,6 +240,54 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
 
                 //Adiciona o cookie
                 Response.Cookies.Add(cookieFantasia);
+
+                #endregion
+
+                #region MORADOR
+
+                HttpCookie cookieIdMorador = new HttpCookie("IdMorador");
+                cookieIdMorador.Value = idUsuario.ToString();
+
+                cookieIdMorador.Expires = (dtNow + tsMinute);
+
+                //Adiciona o cookie
+                Response.Cookies.Add(cookieIdMorador);
+
+                //NOME MORADOR
+                HttpCookie cookieNomeMorador = new HttpCookie("NomeMorador");
+                cookieNomeMorador.Value = nomeMorador.ToString();
+
+                cookieNomeMorador.Expires = (dtNow + tsMinute);
+
+                //Adiciona o cookie
+                Response.Cookies.Add(cookieNomeMorador);
+
+                //TORRE MORADOR
+                HttpCookie cookieTorreMorador = new HttpCookie("TorreMorador");
+                cookieTorreMorador.Value = torreMorador.ToString();
+
+                cookieTorreMorador.Expires = (dtNow + tsMinute);
+
+                //Adiciona o cookie
+                Response.Cookies.Add(cookieTorreMorador);
+
+                //BLOCO MORADOR
+                HttpCookie cookieBlocoMorador = new HttpCookie("BlocoMorador");
+                cookieBlocoMorador.Value = blocoMorador.ToString();
+
+                cookieBlocoMorador.Expires = (dtNow + tsMinute);
+
+                //Adiciona o cookie
+                Response.Cookies.Add(cookieBlocoMorador);
+
+                //APTO MORADOR
+                HttpCookie cookieAptoMorador = new HttpCookie("AptoMorador");
+                cookieAptoMorador.Value = aptoMorador.ToString();
+
+                cookieAptoMorador.Expires = (dtNow + tsMinute);
+
+                //Adiciona o cookie
+                Response.Cookies.Add(cookieAptoMorador);
 
                 #endregion
             }

@@ -53,6 +53,7 @@
     <Compile Include="Grupos.cs" />
     <Compile Include="Leis.cs" />
     <Compile Include="Morador.cs" />
+    <Compile Include="MoradorVisitante.cs" />
     <Compile Include="MoradorDepedente.cs" />
     <Compile Include="Mudancas.cs" />
     <Compile Include="Pessoa.cs" />

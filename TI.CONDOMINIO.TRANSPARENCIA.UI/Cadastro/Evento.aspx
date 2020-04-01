@@ -33,7 +33,6 @@
                     </div>
                 </div>
 
-
                 <div class="form-group">
 
                     <asp:Label runat="server" AssociatedControlID="horaInicio" CssClass="col-md-2 control-label">Hora Inicio:</asp:Label>
@@ -56,11 +55,12 @@
 
                 </div>
 
-
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <asp:Button runat="server"
                             Text="Salvar" CssClass="btn btn-default" ToolTip="Salvar Dados Usuário" OnClick="Unnamed6_Click" />
+                            <asp:Button runat="server"
+                            Text="Lista de Convidados" CssClass="btn btn-default" ToolTip="Visualizar Lista de Convidados" PostBackUrl="~/Pesquisas/ListarConvidado.aspx" />
                     </div>
 
                 </div>

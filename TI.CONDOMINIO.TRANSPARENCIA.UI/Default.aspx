@@ -26,7 +26,7 @@
                 <br />
                             Fone: (16) 3357-2972
                 <br />
-                            Mudanças e Entregas: 08:00 as 16:00 Hs.<br />
+                            Mudanças e Entregas: SEG - SEX 08:00 as 16:00 Hs. - SAB 08:00 as 12:00 Hs.<br />
 
                             <strong>E-Mail:</strong>
                             <a href="mailto:contato@ipeamarelo.com.br">contato@ipeamarelo.com.br</a><br />

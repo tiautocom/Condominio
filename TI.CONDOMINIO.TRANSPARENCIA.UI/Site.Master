@@ -120,7 +120,7 @@
                 <div class="footer-copyright text-center py-3">
                     © 2020 TI Solutions Commerce: 
                         <%-- <a href="Account/Login.aspx">Login Administrador</a>--%>
-                    <p>versão:10-06</p>
+                    <p>versão:10-08</p>
                     <p style="font-size: 10px">Desenvolvedor: A.LINO</p>
                 </div>
                 <!-- Copyright -->

@@ -15,7 +15,7 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
-        public int idUsuario = 0;
+        public int idUsuario, idMorador = 0;
         public string login, senha, token, fantasia = "";
 
         protected void Page_Init(object sender, EventArgs e)
@@ -111,6 +111,11 @@ namespace TI.CONDOMINIO.TRANSPARENCIA.UI
                 HttpCookie cookieFantasia = new HttpCookie("Fantasia");
                 cookieFantasia = Request.Cookies["Fantasia"];
                 fantasia = cookieFantasia.Value.ToString().Trim();
+
+                //Cria o obj cookie e recebe o IdUsuario
+                HttpCookie cookieIdMorador = new HttpCookie("idMorador");
+                cookieIdMorador = Request.Cookies["idMorador"];
+                idMorador = Convert.ToInt32(cookieIdMorador.Value.ToString());
 
                 if (idUsuario > 0)
                 {

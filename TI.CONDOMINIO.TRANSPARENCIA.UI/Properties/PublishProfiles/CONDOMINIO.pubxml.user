@@ -262,28 +262,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/22/2013 08:21:56</publishTime>
     </File>
     <File Include="bin/TI.ACESSO.DADOS.dll">
-      <publishTime>03/25/2020 17:44:43</publishTime>
+      <publishTime>04/01/2020 12:18:15</publishTime>
     </File>
     <File Include="bin/TI.ACESSO.DADOS.pdb">
-      <publishTime>03/25/2020 17:44:43</publishTime>
+      <publishTime>04/01/2020 12:18:15</publishTime>
     </File>
     <File Include="bin/TI.CONDOMINIO.TRANSPARENCIA.UI.dll">
-      <publishTime>03/25/2020 17:44:49</publishTime>
+      <publishTime>04/01/2020 15:05:32</publishTime>
     </File>
     <File Include="bin/TI.CONDOMINIO.TRANSPARENCIA.UI.pdb">
-      <publishTime>03/25/2020 17:44:49</publishTime>
+      <publishTime>04/01/2020 15:05:32</publishTime>
     </File>
     <File Include="bin/TI.OBJETO.TRANSFERENCIA.dll">
-      <publishTime>03/25/2020 17:44:44</publishTime>
+      <publishTime>04/01/2020 12:18:16</publishTime>
     </File>
     <File Include="bin/TI.OBJETO.TRANSFERENCIA.pdb">
-      <publishTime>03/25/2020 17:44:44</publishTime>
+      <publishTime>04/01/2020 12:18:16</publishTime>
     </File>
     <File Include="bin/TI.REGRA.NEGOCIOS.dll">
-      <publishTime>03/25/2020 17:44:44</publishTime>
+      <publishTime>04/01/2020 15:05:28</publishTime>
     </File>
     <File Include="bin/TI.REGRA.NEGOCIOS.pdb">
-      <publishTime>03/25/2020 17:44:44</publishTime>
+      <publishTime>04/01/2020 15:05:28</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>09/10/2013 17:28:38</publishTime>
@@ -301,10 +301,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/11/2019 14:33:30</publishTime>
     </File>
     <File Include="Cadastro/Convidados.aspx">
-      <publishTime>03/25/2020 14:54:55</publishTime>
+      <publishTime>04/01/2020 10:25:37</publishTime>
     </File>
     <File Include="Cadastro/Evento.aspx">
-      <publishTime>03/25/2020 16:48:59</publishTime>
+      <publishTime>04/01/2020 15:02:51</publishTime>
     </File>
     <File Include="Cadastro/Galeria.aspx">
       <publishTime>03/25/2020 14:57:05</publishTime>
@@ -314,6 +314,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Cadastro/LeiAcesso.aspx">
       <publishTime>09/10/2019 17:23:16</publishTime>
+    </File>
+    <File Include="Cadastro/ListaConvidado.aspx">
+      <publishTime>03/26/2020 16:21:54</publishTime>
     </File>
     <File Include="Cadastro/Moradores.aspx">
       <publishTime>03/25/2020 12:01:03</publishTime>
@@ -340,7 +343,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/30/2019 12:45:36</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>03/25/2020 16:45:42</publishTime>
+      <publishTime>04/01/2020 09:43:25</publishTime>
     </File>
     <File Include="Download/AtaReuniao.aspx">
       <publishTime>05/09/2019 12:37:22</publishTime>
@@ -679,7 +682,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/14/2020 10:01:30</publishTime>
     </File>
     <File Include="Login.aspx">
-      <publishTime>02/14/2020 11:08:10</publishTime>
+      <publishTime>03/26/2020 09:56:54</publishTime>
     </File>
     <File Include="login2.css">
       <publishTime>01/30/2020 10:22:14</publishTime>
@@ -694,7 +697,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/29/2019 18:03:56</publishTime>
     </File>
     <File Include="Pesquisas/ListarConvidado.aspx">
-      <publishTime>03/25/2020 16:49:46</publishTime>
+      <publishTime>04/01/2020 14:49:02</publishTime>
     </File>
     <File Include="Pesquisas/Transparencias.aspx">
       <publishTime>09/30/2019 14:01:14</publishTime>
@@ -868,7 +871,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/27/2019 09:53:58</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>03/25/2020 17:32:42</publishTime>
+      <publishTime>03/27/2020 11:25:17</publishTime>
     </File>
     <File Include="UpLoad/Grupo.aspx">
       <publishTime>09/11/2019 12:44:14</publishTime>
@@ -970,7 +973,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2017 21:52:52</publishTime>
     </File>
     <File Include="Views/AgendaEventos.aspx">
-      <publishTime>03/25/2020 17:12:34</publishTime>
+      <publishTime>03/25/2020 17:52:18</publishTime>
     </File>
     <File Include="Views/Album.aspx">
       <publishTime>03/25/2020 15:15:21</publishTime>
@@ -994,7 +997,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/13/2020 13:05:06</publishTime>
     </File>
     <File Include="Views/Moradores.aspx">
-      <publishTime>02/18/2020 14:03:28</publishTime>
+      <publishTime>03/31/2020 15:54:03</publishTime>
     </File>
     <File Include="Views/Mudanca.aspx">
       <publishTime>07/01/2019 11:54:46</publishTime>
@@ -1006,7 +1009,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/30/2019 12:45:36</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/25/2020 17:45:36</publishTime>
+      <publishTime>04/01/2020 15:05:32</publishTime>
     </File>
   </ItemGroup>
 </Project>

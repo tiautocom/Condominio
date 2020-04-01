@@ -50,3 +50,4 @@ C:\Users\tiaut\Desktop\adriano\TI.CONDOMINIO\TI.CONDOMINIO\TI.ACESSO.DADOS\obj\D
 C:\Users\tiaut\Desktop\adriano\TI.CONDOMINIO\TI.CONDOMINIO\TI.ACESSO.DADOS\obj\Debug\TI.ACESSO.DADOS.pdb
 C:\Users\tiaut\Desktop\adriano\TI.CONDOMINIO\TI.CONDOMINIO\TI.ACESSO.DADOS\obj\Debug\TI.ACESSO.DADOS.csprojAssemblyReference.cache
 C:\Users\tiaut\Desktop\adriano\TI.CONDOMINIO\TI.CONDOMINIO\TI.ACESSO.DADOS\obj\Debug\TI.ACESSO.DADOS.csproj.CoreCompileInputs.cache
+C:\Projetos\Git\CONDOMINIOS\TI.CONDOMINIO\TI.CONDOMINIO\TI.ACESSO.DADOS\obj\Debug\TI.ACESSO.DADOS.csprojResolveAssemblyReference.cache

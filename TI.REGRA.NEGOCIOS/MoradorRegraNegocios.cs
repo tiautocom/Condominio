@@ -325,5 +325,28 @@ namespace TI.REGRA.NEGOCIOS
                 throw new Exception(ex.Message);
             }
         }
+
+        public int AlterarConvidado(Morador morador)
+        {
+            try
+            {
+                conexaoSqlServer.LimparParametros();
+
+                conexaoSqlServer.AdicionarParametros("@Id", morador.MoradorVisitante.Id);
+                conexaoSqlServer.AdicionarParametros("@Id_Morador", morador.MoradorVisitante.IdMorador);
+                conexaoSqlServer.AdicionarParametros("@Id_Tipo_Visitante", morador.MoradorVisitante.IdTipoVisitante);
+                conexaoSqlServer.AdicionarParametros("@Nome_Visitante", morador.MoradorVisitante.Nome);
+                conexaoSqlServer.AdicionarParametros("@Obs", morador.MoradorVisitante.Observacao);
+                conexaoSqlServer.AdicionarParametros("@Dt_Autorizacao", morador.MoradorVisitante.DataAutorizacao);
+
+                int ret = 0;
+                ret = Convert.ToInt32(conexaoSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspAlterarMoradorConvidado").ToString());
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
